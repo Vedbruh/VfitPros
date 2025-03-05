@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Fitness Coaching</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"> Back to Home</a>
+    </header>
+    
+    <section class="login">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="login-email" required>
+            
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+            
+            <button type="button" onclick="sendOTP()">Login</button>
+        </form>
+
+        <!-- OTP Verification Section (Hidden Initially) -->
+        <div id="otp-section" style="display: none;">
+            <h3>Enter OTP</h3>
+            <p>A 6-digit OTP has been sent to your email.</p>
+            <input type="text" id="otp-code" placeholder="Enter OTP" required>
+            <button type="button" onclick="verifyOTP()">Verify OTP</button>
+        </div>
+
+        <!-- Switch to Register Button -->
+        <p>New here? <button onclick="redirectToRegister()">Create an Account</button></p>
+    </section>
+
+    <script>
+        function sendOTP() {
+            // Simulate OTP sending process
+            alert("A 6-digit OTP has been sent to your email.");
+            
+            // Show OTP section
+            document.getElementById("otp-section").style.display = "block";
+        }
+
+        function verifyOTP() {
+            let otp = document.getElementById("otp-code").value;
+            
+            // Simulated OTP verification (replace with actual backend logic)
+            if (otp === "123456") {
+                alert("OTP verified successfully! Redirecting...");
+                window.location.href = "index.html"; // Change to your main page
+            } else {
+                alert("Invalid OTP. Please try again.");
+            }
+        }
+
+        function redirectToRegister() {
+            window.location.href = "register.html";
+        }
+    </script>
+</body>
+</html>

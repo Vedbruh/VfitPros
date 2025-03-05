@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Calorie Calculator</title>
+    <link rel="stylesheet" href="CC.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Calorie Calculator</h1>
+        <form id="calorie-form">
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">Age (years):</label>
+                <input type="number" id="age" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" required>
+            </div>
+            <div class="form-group">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" required>
+            </div>
+            <div class="form-group">
+                <label for="activity">Activity Level:</label>
+                <select id="activity" required>
+                    <option value="1.2">Sedentary (little or no exercise)</option>
+                    <option value="1.375">Lightly active (light exercise/sports 1-3 days/week)</option>
+                    <option value="1.55">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+                    <option value="1.725">Very active (hard exercise/sports 6-7 days a week)</option>
+                    <option value="1.9">Super active (very hard exercise/sports & physical job)</option>
+                </select>
+            </div>
+            <button type="submit">Calculate</button>
+            <button onclick="window.location.href='index.html'" class="back-btn">Back to Main Page</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="calorie calculator.js"></script>
+</body>
+</html>

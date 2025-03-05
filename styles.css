@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+}
+
+header .auth a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #555;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+header .auth a:hover {
+    background: #777;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #e4e4e4;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Calculator Section */
+.calculator {
+    padding: 2rem 1rem;
+    background: #fff;
+}
+
+.calculator h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.calculators {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.calculator-box {
+    flex: 1;
+    max-width: 200px;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Coaches Section */
+.coaches {
+    padding: 2rem 1rem;
+    background: #f4f4f4;
+}
+
+.coaches h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.coach-card {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

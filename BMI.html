@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .bmi-container {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 90%;
+            max-width: 300px;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 90%;
+            max-width: 300px;
+            padding: 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        .back-btn {
+            background-color: #333;
+        }
+        .back-btn:hover {
+            background-color: #333;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        @media (max-width: 480px) {
+            .bmi-container {
+                width: 90%;
+                padding: 15px;
+            }
+            input, button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bmi-container">
+        <h2>BMI Calculator</h2>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight" required>
+
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" placeholder="Enter height" required>
+
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <p id="result"></p>
+
+        <!-- Back Button -->
+        <button class="back-btn" onclick="goBack()">Back to Home</button>
+    </div>
+
+    <script>
+        function calculateBMI() {
+            let weight = parseFloat(document.getElementById('weight').value);
+            let height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
+
+            if (isNaN(weight) || isNaN(height) || height <= 0) {
+                document.getElementById('result').innerText = "Please enter valid values.";
+                return;
+            }
+
+            let bmi = (weight / (height * height)).toFixed(2);
+            let category = "";
+
+            if (bmi < 18.5) category = "Underweight";
+            else if (bmi < 24.9) category = "Normal weight";
+            else if (bmi < 29.9) category = "Overweight";
+            else category = "Obese";
+
+            document.getElementById('result').innerText = `Your BMI is ${bmi} (${category})`;
+        }
+
+        function goBack() {
+            window.location.href = "index.html"; // Change this to your actual homepage file
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strength Progression Tracker</title>
+    <link rel="stylesheet" href="strength_progression.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <section class="progression-chart">
+        <h2>Strength Progression Tracker</h2>
+        
+        <!-- Weight Category Selection -->
+        <label for="weight-unit">Select Weight Unit:</label>
+        <select id="weight-unit" onchange="convertWeights()">
+            <option value="kg">Kilograms (kg)</option>
+            <option value="lbs">Pounds (lbs)</option>
+        </select>
+
+        <table id="progression-table">
+            <thead>
+                <tr>
+                    <th>Exercise Name</th>
+                    <th>Type</th>
+                    <th>Week 1</th>
+                    <th>Week 2</th>
+                    <th>Week 3</th>
+                    <th>Week 4</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Default rows (users can add more) -->
+            </tbody>
+        </table>
+
+        <button onclick="addRow()">Add Exercise</button>
+        <button onclick="saveProgress()">Save Progress</button>
+        <button onclick="window.location.href='index.html'">Back to Main Page</button>
+    </section>
+
+    <!-- Graph Section -->
+    <section class="chart-section">
+        <h2>Progress Analytics</h2>
+        <canvas id="progressChart"></canvas>
+        <button onclick="generateGraph()">Generate Graph</button>
+        <button onclick="clearGraph()">Clear Graph</button>
+    </section>
+
+    <!-- PDF Export Button -->
+    <section>
+        <button onclick="downloadPDF()">Download PDF</button>
+    </section>
+
+    <script src="strength_progression.js"></script>
+</body>
+</html>

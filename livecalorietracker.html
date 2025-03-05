@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Calorie Tracker</title>
+    <link rel="stylesheet" href="LCT.css">
+</head>
+<body>
+
+    <div class="tracker-container">
+        <h1>Live Calorie Tracker</h1>
+
+        <form id="calorie-form">
+            <input type="text" id="food-name" placeholder="Enter food item" required>
+            <input type="number" id="calories" placeholder="Calories" required>
+            <button type="submit">Add</button>
+        </form>
+
+        <h2>Today's Intake</h2>
+        <ul id="calorie-list"></ul>
+
+        <h3>Total Calories: <span id="total-calories">0</span> kcal</h3>
+
+        <!-- Back Button -->
+        <button onclick="window.location.href='index.html'" class="back-btn">Back to Main Page</button>
+    </div>
+
+    <script src="LCT.js"></script>
+
+</body>
+</html>

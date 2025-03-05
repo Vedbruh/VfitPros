@@ -1,0 +1,74 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    text-align: center;
+}
+
+/* Plans Section */
+.plans {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.plans h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Plan Cards */
+.plan-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card h3 {
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.plan-card p {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #555;
+}
+
+/* Buy Button */
+.buy-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+    background: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plan-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
