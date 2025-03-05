@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Transformations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .transformation {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .transformation img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .caption {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Client Transformations</h2>
+    <div class="container">
+        <div class="grid">
+            <div class="transformation">
+                <img src="before1.jpg" alt="Before Transformation">
+                <img src="after1.jpg" alt="After Transformation">
+                <p class="caption">Client 1: Amazing 3-month progress!</p>
+            </div>
+            <div class="transformation">
+                <img src="before2.jpg" alt="Before Transformation">
+                <img src="after2.jpg" alt="After Transformation">
+                <p class="caption">Client 2: Incredible weight gain journey!</p>
+            </div>
+            <div class="transformation">
+                <img src="atharvagandhibefore.jpg" alt="Before Transformation">
+                <img src="atharvagandhiafter.jpg" alt="After Transformation">
+                <p class="caption">Client 3: Strength and muscle growth!</p>
+            </div>
+        </div>
+    </div>
+    <section class="training-plans">
+        <div>
+            <a href="index.html" class="plans-btn">Back to Home</a>
+        </div>
+    </section>
+</body>
+</html>
